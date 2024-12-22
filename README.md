@@ -13,5 +13,6 @@ Black&White Camera는 Jetpack Compose로 개발된 Android 카메라 앱으로, 
 Jetpack Compose, 
 Kotlin Coroutines, 
 CameraX, 
+Coil, 
 MVC
 <br>
