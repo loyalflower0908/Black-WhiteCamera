@@ -22,12 +22,13 @@ CameraX의 `ImageCapture`를 활용해 고해상도 흑백 사진을 촬영합�
 
 ## ⚙️ 기술 스택  
 
-- **언어**: Kotlin 🛠️  
-- **UI**: [Jetpack Compose](https://developer.android.com/jetpack/compose) 🎨  
-- **카메라**: [CameraX](https://developer.android.com/training/camerax) 📸  
-- **이미지 처리**: [Coil](https://coil-kt.github.io/coil/) 🖼️  
-- **아키텍처**: MVC (Model-View-Controller) 🏗️  
-- **비동기 처리**: Kotlin Coroutines ⏳  
+- **언어**: Kotlin 
+- **UI**: [Jetpack Compose](https://developer.android.com/jetpack/compose) 
+- **카메라**: [CameraX](https://developer.android.com/training/camerax) 
+- **이미지 처리**: [Coil](https://coil-kt.github.io/coil/) 
+- **아키텍처**: MVC (Model-View-Controller) 
+- **비동기 처리**: Kotlin Coroutines 
+- **의존성 주입**: Koin  
 
 ---
 
@@ -41,7 +42,8 @@ CameraX의 `ImageCapture`를 활용해 고해상도 흑백 사진을 촬영합�
 - **Controller**: View와 Model 사이의 중재자 역할을 합니다. View의 요청을 받아 Model을 조작하고, Model의 변경 사항을 View에 반영합니다.
 이러한 구조를 통해 코드의 관심사를 분리하고, 재사용성과 테스트 용이성을 높였습니다. 또한, 각 컴포넌트의 역할을 명확히 정의하여 코드의 가독성을 향상시켰습니다.
 
--> 현재 컨트롤러에 너무 많은 부담이 되어 있어서 비즈니스 로직을 Model로 분리하는 작업 필요
+~~-> 현재 컨트롤러에 너무 많은 부담이 되어 있어서 비즈니스 로직을 Model로 분리하는 작업 필요~~
+-> V 1.1 Koin을 통한 의존성 주입으로 해결
 
 ---
 
