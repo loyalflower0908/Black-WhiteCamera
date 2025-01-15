@@ -27,8 +27,8 @@ CameraX의 `ImageCapture`를 활용해 고해상도 흑백 사진을 촬영합�
 - **카메라**: [CameraX](https://developer.android.com/training/camerax) 
 - **이미지 처리**: [Coil](https://coil-kt.github.io/coil/) 
 - **아키텍처**: MVC (Model-View-Controller) 
-- **비동기 처리**: Kotlin Coroutines 
-- **의존성 주입**: Koin  
+- **비동기 처리**: [Kotlin Coroutines](https://developer.android.com/kotlin/coroutines)
+- **의존성 주입**: [Koin](https://insert-koin.io/docs/reference/koin-compose/compose)
 
 ---
 
