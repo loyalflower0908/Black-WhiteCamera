@@ -71,4 +71,8 @@ dependencies {
     implementation "androidx.camera:camera-view:${camerax_version}"
     implementation "androidx.compose.material:material-icons-extended:1.7.6"
     implementation "io.coil-kt.coil3:coil-compose:3.0.4"
+
+    // Koin
+    implementation("io.insert-koin:koin-android:3.5.0")
+    implementation("io.insert-koin:koin-androidx-compose:3.5.0")
 }
