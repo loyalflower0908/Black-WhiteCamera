@@ -19,6 +19,7 @@ import com.loyalflower.blacknwhitecamera.model.manager.CameraManager
 import com.loyalflower.blacknwhitecamera.model.manager.ImageStorageManager
 import com.loyalflower.blacknwhitecamera.model.usecase.ProcessImageUseCase
 import com.loyalflower.blacknwhitecamera.model.usecase.SavePhotoUseCase
+import com.loyalflower.blacknwhitecamera.view.util.TextureViewUtil
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -121,38 +122,13 @@ class CameraController(
             // 이미지 처리 및 비트맵 생성
             val processedBitmap = processImageUseCase(image)
             // 결과 이미지를 TextureView에 표시
-            drawBitmapToTextureView(processedBitmap, textureView)
+            TextureViewUtil.drawBitmapToTextureView(processedBitmap, textureView)
         } catch (e: Exception) {
             // 이미지 분석 실패 시 오류 처리
             onError("Image analysis failed: ${e.message}")
         } finally {
             // ImageProxy 리소스 해제
             image.close()
-        }
-    }
-
-    /**
-     * 처리된 비트맵 이미지를 TextureView에 그리는 메서드입니다.
-     *
-     * @param bitmap 그릴 비트맵 이미지
-     * @param textureView 이미지를 그릴 TextureView
-     */
-    private fun drawBitmapToTextureView(bitmap: Bitmap, textureView: TextureView) {
-        textureView.surfaceTexture?.let { texture ->
-            texture.setDefaultBufferSize(bitmap.width, bitmap.height)
-            val surface = Surface(texture)
-            try {
-                val canvas = surface.lockCanvas(null)
-                try {
-                    // 비트맵을 캔버스에 그리기
-                    canvas.drawBitmap(bitmap, 0f, 0f, null)
-                } finally {
-                    surface.unlockCanvasAndPost(canvas)
-                }
-            } finally {
-                // Surface 리소스 해제
-                surface.release()
-            }
         }
     }
 
