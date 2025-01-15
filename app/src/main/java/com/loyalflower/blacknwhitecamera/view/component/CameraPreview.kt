@@ -17,6 +17,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.loyalflower.blacknwhitecamera.controller.CameraController
+import org.koin.compose.koinInject
+import org.koin.core.parameter.parametersOf
 
 /**
  * 카메라 미리보기와 사진 촬영 기능을 제공하는 Composable 함수입니다.
@@ -52,8 +54,8 @@ fun CameraPreview(
     // TextureView를 저장하는 상태 변수
     var textureView by remember { mutableStateOf<TextureView?>(null) }
 
-    // CameraController 객체 생성
-    val controller = remember { CameraController(context) }
+    // CameraController 객체 생성 - Koin으로부터 가져옴
+    val controller = koinInject<CameraController> { parametersOf(context) }
 
     // DisposableEffect를 사용하여 리소스 해제
     DisposableEffect(Unit) {
