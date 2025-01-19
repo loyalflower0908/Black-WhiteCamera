@@ -76,7 +76,7 @@ MVC 패턴을 사용할 때는 역할 분리가 힘들었다.
 
 ## 🖼️ 스크린샷  
 
-| <img src="path/to/screenshot1.jpg" width="200"> | <img src="path/to/screenshot2.jpg" width="200"> | <img src="path/to/screenshot3.jpg" width="200"> |  
+| <img src="https://github.com/loyalflower0908/Black-WhiteCamera/blob/master/B-W-C%20Screenshot/B-W-C%20Screenshot1.png" width="200"> | <img src="https://github.com/loyalflower0908/Black-WhiteCamera/blob/master/B-W-C%20Screenshot/B-W-C%20Screenshot2.png" width="200"> | <img src="https://github.com/loyalflower0908/Black-WhiteCamera/blob/master/B-W-C%20Screenshot/B-W-C%20Result.jpg" width="200"> |  
 | :----------------------------------------------: | :----------------------------------------------: | :----------------------------------------------: |  
 |                 기본 카메라 화면                 |                  결과물 확인 화면                 |                    결과물 예시                    |  
 
